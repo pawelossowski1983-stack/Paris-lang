@@ -1,0 +1,84 @@
+#!/usr/bin/env python3
+import struct, zlib, base64
+
+def create_png(size, bg_color, tower_color):
+    """Create a simple PNG with Eiffel tower silhouette"""
+    img = []
+    for y in range(size):
+        row = []
+        for x in range(size):
+            cx = size // 2
+            # Background
+            r, g, b = bg_color
+            a = 255
+            
+            # Draw simple tower shape
+            norm_y = y / size  # 0=top, 1=bottom
+            norm_x = (x - cx) / size
+            
+            # Tower body - gets wider toward bottom
+            tower_half_width = norm_y * 0.12 + 0.02
+            # Platform near top
+            if norm_y < 0.15:
+                tower_half_width = 0.015
+            # Tip at very top
+            if norm_y < 0.05:
+                tower_half_width = 0.008
+            # Base spread
+            if norm_y > 0.75:
+                tower_half_width = (norm_y - 0.75) * 0.5 + 0.08
+            # Legs at bottom
+            if norm_y > 0.85:
+                left_leg = abs(norm_x - (-0.10)) < 0.025
+                right_leg = abs(norm_x - (0.10)) < 0.025
+                center_body = abs(norm_x) < 0.04
+                in_tower = left_leg or right_leg or center_body
+            else:
+                in_tower = abs(norm_x) < tower_half_width
+            
+            # Arches at bottom
+            if norm_y > 0.65 and norm_y < 0.80:
+                arch_height = (norm_y - 0.65) / 0.15
+                left_arch = (norm_x + 0.06)**2 + (arch_height - 1)**2 < 0.004
+                right_arch = (norm_x - 0.06)**2 + (arch_height - 1)**2 < 0.004
+                if left_arch or right_arch:
+                    in_tower = False
+            
+            if in_tower and norm_y > 0.03 and norm_y < 0.92:
+                r, g, b = tower_color
+            
+            row.extend([r, g, b, a])
+        img.append(row)
+    
+    def write_png(width, height, pixels):
+        def make_chunk(chunk_type, data):
+            c = chunk_type + data
+            return struct.pack('>I', len(data)) + c + struct.pack('>I', zlib.crc32(c) & 0xffffffff)
+        
+        sig = b'\x89PNG\r\n\x1a\n'
+        ihdr_data = struct.pack('>IIBBBBB', width, height, 8, 2, 0, 0, 0)
+        ihdr = make_chunk(b'IHDR', ihdr_data)
+        
+        raw = b''
+        for row in pixels:
+            raw += b'\x00' + bytes(row)
+        
+        idat = make_chunk(b'IDAT', zlib.compress(raw))
+        iend = make_chunk(b'IEND', b'')
+        return sig + ihdr + idat + iend
+    
+    flat = []
+    for row in img:
+        flat.append(row)
+    
+    return write_png(size, size, flat)
+
+# Generate icons
+sizes = [192, 512]
+for sz in sizes:
+    png_data = create_png(sz, (26, 26, 52), (232, 184, 75))
+    with open(f'/home/claude/paris-pwa/icons/icon-{sz}.png', 'wb') as f:
+        f.write(png_data)
+    print(f"Created icon-{sz}.png ({len(png_data)} bytes)")
+
+print("Icons generated!")

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta name="theme-color" content="#e8b84b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Paris Guide">
+<title>Paris Family Guide 🗼</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAEkUlEQVR4nO3WsREcNxBEUcbBOJSFElZIykL0VDRYtbeLmWvM4hnPH6M/Cj9+/vzrPzjVj/QBkCQAjiYAjiYAjiYAjiaAoH//+ft/6VtOJYAgAeQJIEgAeQIIEkCeAEJ+H78IcgQQIoA9CCBEAHsQQIgA9iCAEAHsQQAhAtiDAEIEsAcBhAhgDwIIEcAeBBAigD0IIEQAexBAiAD2IIAQAexBACEC2IMAQgSwBwGECGAPAggRwB4EECKAPQggRAB7EMAX/Gnsn0rf/nYC+AIB7EsAXyCAfQngCwSwLwF8gQD2JYAvEMC+BNBsZfwi6CeAZgLYmwCaCWBvAmgmgL0JoJkA9iaAZgLYmwCaCWBvAmgmgL0JoJkA9iaARhXjF0EvATQSwP4E0EgA+xNAIwHsTwCNBLA/ATQSwP4E0EgA+xNAIwHsTwBNKscvgj4CaCKAGQTQRAAzCKCJAGYQQBMBzCCAJgKYQQBNBDCDAJoIYAYBNOgYvwh6CKCBAOYQQAMBzCGABgKYQwANBDCHABoIYA4BNBDAHAJoIIA5BNBAAHMIoFjn+EVQTwDFBDCLAIoJYBYBFBPALAIoJoBZBFBMALMIoJgAZhFAMQHMIoBC3xi/CGoJoJAA5hFAIQHMI4BCAphHAIUEMI8ACglgHgEUEsA8AigkgHkEUOSb4xdBHQEUEcBMAigigJkEUEQAMwmgiABmEkARAcwkgCICmEkARQQwkwCKCGAmARRIjF8ENQRQQABzCaCAAOYSQAEBzCWAAgKYSwAFBDCXAAoIYC4BFBDAXAJYlBy/CNYJYFF6/AJYI4BF6fELYI0AFqXHL4A1AliUHr8A1ghgUXr8AlgjgEXp8QtgjQAWpccvgDUCWJAevgjWCWBBevQCWCeABenRC2CdABakRy+AdQJYkB69ANYJYEF69AJYJ4AF6dELYJ0AFqRHL4B1AliQHr0A1gngofTgRVBDAA+lxy6AGgJ4KD12AdQQwEPpsQughgAeSo9dADUE8FB67AKoIYCH0mMXQA0BPJQeuwBqCOCB9NBFUEcAD6RHLoA6AnggPXIB1BHAA+mRC6COAB5Ij1wAdQTwQHrkAqgjgAfSIxdAHQE8kB65AOoI4Kb0wEVQSwA3pcctgFoCuCk9bgHUEsBN6XELoJYAbkqPWwC1BHBTetwCqCWAm9LjFkAtAdyUHrcAagngpvS4BVBLADekhy2CegIoYOhzCWBR+qUXwRoBLEqPXwBrBLAgPXwRrBPAgvToBbBOAA+lBy+CGgJ4KD12AdQQwANPB9c5ZhE8I4Awo80SwE3pb46vUC0B3JQetwBqCeCG9LBFUE8AN6RHLYB6AvhQetAi6CGAD6XHLIAeAvhAesgi6COAD6RHLIA+AriQHrAIegngQnq8AuglgAsVI+sarwDWCeCCAN5NABcE8G4CuCCAdxPABQG8mwAuCODdBHBBAO8mgAsCeDcBXBDAuwngggDeTQAXBPBuArgggHcTwAUBvJsAOJoAOJoAOJoAOJoAOJoAOJoAOJoAOJoAOJoAOJoAOJoAOJoAOJoAOJoAONovtR7vVsoSL2oAAAAASUVORK5CYII=">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiUGFyaXMgRmFtaWx5IEd1aWRlIiwic2hvcnRfbmFtZSI6IlBhcmlzIEd1aWRlIiwiZGVzY3JpcHRpb24iOiJTxYJvd25payBpIGFzeXN0ZW50IEFJIGRsYSByb2R6aW55IHcgUGFyecW8dSIsInN0YXJ0X3VybCI6Ii4vIiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiIzBmMGYxYSIsInRoZW1lX2NvbG9yIjoiI2U4Yjg0YiIsIm9yaWVudGF0aW9uIjoicG9ydHJhaXQiLCJsYW5nIjoicGwifQo=">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--bg:#0f0f1a;--bg2:#1a1a2e;--bg3:#16213e;--card:#1e1e35;--card2:#252545;--acc:#e8b84b;--acc2:#f5d78a;--blue:#4a9eff;--green:#4ecdc4;--red:#ff6b6b;--text:#f0eff8;--muted:#9898bb;--border:#2e2e55;--r:14px;--rs:8px;--sb:env(safe-area-inset-bottom,0px)}
+html,body{height:100%;overflow:hidden}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:15px;line-height:1.5;display:flex;flex-direction:column}
+#app{flex:1;overflow:hidden;display:flex;flex-direction:column}
+.page{display:none;flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:calc(68px + var(--sb))}
+.page.active{display:flex;flex-direction:column}
+.nav{display:flex;background:var(--bg2);border-top:1px solid var(--border);padding:8px 0;padding-bottom:calc(8px + var(--sb));flex-shrink:0;z-index:50}
+.nav-btn{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 4px;cursor:pointer;border:none;background:none;color:var(--muted);font-size:10px;font-family:inherit;transition:color .2s;line-height:1.2}
+.nav-btn.active{color:var(--acc)}
+.nav-icon{font-size:20px;line-height:1.2}
+.header{background:linear-gradient(135deg,var(--bg3),var(--bg2));padding:20px 20px 16px;border-bottom:1px solid var(--border);flex-shrink:0}
+.header h1{font-size:22px;color:var(--acc);font-weight:600}
+.header p{color:var(--muted);font-size:13px;margin-top:3px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin:0 16px 12px}
+#install-banner{display:none;background:linear-gradient(135deg,#1a2a1a,#0f1f0f);border:1px solid #2e552e;border-radius:var(--r);padding:14px 16px;margin:16px 16px 4px;cursor:pointer;align-items:center;gap:12px}
+#install-banner.show{display:flex}
+.install-cta{background:var(--green);color:#0f1a0f;border:none;border-radius:20px;padding:8px 14px;font-size:12px;font-weight:500;cursor:pointer;font-family:inherit;white-space:nowrap}
+#api-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:200;align-items:flex-end;justify-content:center}
+#api-overlay.show{display:flex}
+#api-modal{background:var(--bg2);border:1px solid var(--border);border-radius:20px 20px 0 0;padding:24px 20px calc(24px + var(--sb));width:100%;max-width:500px}
+#api-modal h2{color:var(--acc);font-size:20px;margin-bottom:8px;font-weight:600}
+#api-modal p{color:var(--muted);font-size:13px;margin-bottom:14px;line-height:1.6}
+.api-inp{width:100%;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--text);font-size:14px;font-family:inherit;outline:none;margin-bottom:12px;letter-spacing:.5px}
+.api-inp:focus{border-color:var(--acc)}
+.api-inp::placeholder{color:var(--muted);letter-spacing:0}
+.btn-row{display:flex;gap:10px}
+.btn-p{flex:1;background:var(--acc);border:none;border-radius:10px;padding:12px;color:#0f0f1a;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit}
+.btn-s{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--muted);font-size:14px;cursor:pointer;font-family:inherit}
+.api-msg{padding:10px 14px;border-radius:10px;font-size:13px;margin-bottom:12px;display:none}
+.api-msg.ok{background:#0d2a1a;border:1px solid #1a5a2e;color:var(--green);display:block}
+.api-msg.err{background:#2a0d0d;border:1px solid #5a1a1a;color:var(--red);display:block}
+.api-link{color:var(--blue);font-size:12px}
+.api-ind{display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:3px 10px;border-radius:20px;cursor:pointer;margin-top:8px}
+.api-ind.ok{background:#0d2a1a;border:1px solid #1a5a2e;color:var(--green)}
+.api-ind.no{background:#2a1a0d;border:1px solid #5a3a1a;color:#ffaa55}
+.dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.dot.ok{background:var(--green)}
+.dot.no{background:#ffaa55}
+.cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px}
+.cat-btn{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px 12px;cursor:pointer;text-align:center;color:var(--text)}
+.cat-btn:active{border-color:var(--acc);background:var(--card2)}
+.cat-icon{font-size:26px;margin-bottom:6px;line-height:1.2}
+.cat-count{font-size:11px;color:var(--acc);margin-top:2px}
+.phrase-list-wrap{padding:0 16px 8px}
+.phrase-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px 52px 14px 16px;margin-bottom:10px;cursor:pointer;position:relative}
+.phrase-card:active,.phrase-card.open{border-color:var(--acc)}
+.phrase-fr{font-size:17px;font-weight:600;color:var(--acc2);margin-bottom:2px}
+.phrase-pl{font-size:13px;color:var(--muted)}
+.phrase-pron{font-size:13px;color:var(--blue);margin-top:5px;font-style:italic}
+.phrase-tip{font-size:12px;color:var(--green);margin-top:8px;padding-top:8px;border-top:1px solid var(--border);display:none;line-height:1.6}
+.phrase-card.open .phrase-tip{display:block}
+.speak-btn{position:absolute;right:12px;top:14px;background:var(--acc);border:none;border-radius:50%;width:34px;height:34px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;color:#0f0f1a}
+.speak-btn:active{transform:scale(.88)}
+.search-wrap{padding:12px 16px 4px}
+.search-inp{width:100%;background:var(--card);border:1px solid var(--border);border-radius:40px;padding:10px 18px;color:var(--text);font-size:14px;font-family:inherit;outline:none}
+.search-inp:focus{border-color:var(--acc)}
+.search-inp::placeholder{color:var(--muted)}
+.back-btn{display:flex;align-items:center;gap:6px;padding:12px 16px 4px;cursor:pointer;color:var(--acc);font-size:14px;font-weight:500;background:none;border:none;font-family:inherit}
+.chat-inner{display:flex;flex-direction:column;flex:1;padding:12px 16px 0;overflow:hidden}
+.chat-history{display:flex;flex-direction:column;gap:10px;flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px}
+.msg{max-width:88%;padding:12px 14px;border-radius:16px;font-size:14px;line-height:1.6}
+.msg.user{background:var(--acc);color:#0f0f1a;margin-left:auto;border-bottom-right-radius:4px;font-weight:500}
+.msg.ai{background:var(--card2);border:1px solid var(--border);margin-right:auto;border-bottom-left-radius:4px}
+.chat-bottom{flex-shrink:0;padding:10px 0 4px}
+.quick-btns{display:flex;gap:8px;overflow-x:auto;padding:0 0 10px;scrollbar-width:none}
+.quick-btns::-webkit-scrollbar{display:none}
+.qbtn{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:7px 14px;font-size:12px;cursor:pointer;white-space:nowrap;color:var(--text);font-family:inherit;flex-shrink:0}
+.qbtn:active{border-color:var(--acc);color:var(--acc)}
+.chat-inp-row{display:flex;gap:8px;align-items:center}
+.chat-inp{flex:1;background:var(--card);border:1px solid var(--border);border-radius:40px;padding:11px 18px;color:var(--text);font-size:14px;font-family:inherit;outline:none}
+.chat-inp:focus{border-color:var(--acc)}
+.chat-inp::placeholder{color:var(--muted)}
+.send-btn{background:var(--acc);border:none;border-radius:50%;width:44px;height:44px;cursor:pointer;font-size:18px;color:#0f0f1a;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.send-btn:active{transform:scale(.92)}
+.no-key-warn{background:#2a1a0d;border:1px solid #5a3a1a;border-radius:var(--rs);padding:12px 14px;font-size:13px;color:#ffaa55;margin-bottom:10px;cursor:pointer;display:none}
+.tips-scroll{padding:0 16px 8px}
+.ts-title{font-size:11px;font-weight:600;color:var(--acc);margin:16px 0 8px;text-transform:uppercase;letter-spacing:.8px}
+.tip-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px;margin-bottom:10px}
+.tip-card .tt{font-size:14px;font-weight:600;color:var(--acc2);margin-bottom:4px}
+.tip-card .tb{font-size:13px;color:var(--muted);line-height:1.6}
+.tip-card .tb b{color:var(--text)}
+.bdg{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:500;margin-right:6px}
+.b-i{background:#4a9eff22;color:var(--blue);border:1px solid #4a9eff44}
+.b-t{background:#4ecdc422;color:var(--green);border:1px solid #4ecdc444}
+.b-w{background:#ff6b3322;color:#ff9966;border:1px solid #ff6b3344}
+.settings-wrap{padding:16px}
+.setting-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:12px}
+.setting-card h3{color:var(--acc2);font-size:15px;margin-bottom:8px;font-weight:600}
+.setting-card p{color:var(--muted);font-size:13px;line-height:1.6;margin-bottom:12px}
+.key-disp{background:var(--bg);border:1px solid var(--border);border-radius:var(--rs);padding:10px 14px;font-size:12px;color:var(--muted);font-family:monospace;margin-bottom:10px;word-break:break-all}
+.hero{background:linear-gradient(135deg,#1a1a35,#0f0f22);padding:24px 20px;text-align:center;border-bottom:1px solid var(--border)}
+.hero h1{font-size:22px;color:var(--acc);margin-bottom:4px;font-weight:600}
+.hero p{font-size:13px;color:var(--muted)}
+.hero-dates{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:8px 16px;display:inline-block;margin-top:10px;font-size:13px;color:var(--acc2)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:16px 16px 0}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--rs);padding:12px;text-align:center}
+.stat-num{font-size:22px;font-weight:700;color:var(--acc)}
+.stat-lbl{font-size:11px;color:var(--muted);margin-top:2px}
+</style>
+</head>
+<body>
+
+<div id="api-overlay" onclick="if(event.target===this)closeApiModal()">
+  <div id="api-modal">
+    <h2>🔑 Klucz API Anthropic</h2>
+    <p>Wymagany do asystenta AI. Klucz jest zapisywany <strong style="color:var(--text)">tylko lokalnie na Twoim telefonie</strong> i nigdy nie trafia nigdzie poza API Anthropic.</p>
+    <p>Utwórz bezpłatny klucz na: <a class="api-link" href="https://console.anthropic.com/keys" target="_blank">console.anthropic.com/keys</a></p>
+    <div id="api-msg" class="api-msg"></div>
+    <input class="api-inp" id="api-key-inp" type="password" placeholder="sk-ant-api03-..." autocomplete="off" autocorrect="off" spellcheck="false">
+    <div class="btn-row">
+      <button class="btn-s" onclick="closeApiModal()">Anuluj</button>
+      <button class="btn-p" onclick="saveApiKey()">✓ Zapisz i aktywuj</button>
+    </div>
+  </div>
+</div>
+
+<div id="app">
+
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div style="font-size:50px;margin-bottom:8px">🗼</div>
+    <h1>Paris Family Guide</h1>
+    <p>Słownik, zwroty i asystent AI dla Waszej rodziny</p>
+    <div class="hero-dates">📅 17-22 kwietnia 2026 · La Défense</div>
+  </div>
+  <div id="install-banner" onclick="triggerInstall()">
+    <div style="font-size:26px;flex-shrink:0">📲</div>
+    <div style="flex:1"><strong style="display:block;color:var(--green);font-size:14px">Dodaj do ekranu głównego</strong><span style="color:var(--muted);font-size:12px">Działa offline, bez przeglądarki</span></div>
+    <button class="install-cta">Instaluj</button>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="stat-num">85+</div><div class="stat-lbl">zwrotów</div></div>
+    <div class="stat"><div class="stat-num">12</div><div class="stat-lbl">kategorii</div></div>
+    <div class="stat"><div class="stat-num">AI</div><div class="stat-lbl">asystent</div></div>
+  </div>
+  <div style="padding:16px 16px 0">
+    <div id="home-api-ind" class="api-ind no" onclick="openApiModal()">
+      <div class="dot no" id="home-dot"></div>
+      <span id="home-api-txt">Brak klucza API, kliknij by dodać</span>
+    </div>
+  </div>
+  <div style="height:16px"></div>
+  <div class="card">
+    <div style="font-size:13px;color:var(--acc);font-weight:600;margin-bottom:6px">💡 Złota zasada</div>
+    <div style="font-size:14px">Zawsze zacznij od <strong style="color:var(--acc2)">"Bonjour !"</strong> przed każdym zdaniem. To klucz do serca każdego Francuza.</div>
+  </div>
+  <div class="card">
+    <div style="font-size:13px;color:var(--green);font-weight:600;margin-bottom:6px">🎒 Szybki start dla Kuby (8 lat)</div>
+    <div style="font-size:14px;color:var(--muted)">Naucz go 3 zwrotów: <strong style="color:var(--text)">Bonjour, Merci, Où sont les toilettes?</strong></div>
+  </div>
+  <div class="card" style="cursor:pointer;border-color:#ff3b3b44" onclick="goPage('page-phrases');showPhrases('emergency')">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div><div style="font-size:13px;color:#ff7070;font-weight:600;margin-bottom:4px">🚨 Zwroty awaryjne</div><div style="font-size:13px;color:var(--muted)">Miej pod ręką zawsze gdy potrzeba</div></div>
+      <div style="font-size:24px;color:var(--muted)">›</div>
+    </div>
+  </div>
+</div>
+
+<div class="page" id="page-phrases">
+  <div class="header"><h1>Słownik</h1><p>Kliknij kartę by zobaczyć wskazówki, ▶ by odsłuchać</p></div>
+  <div class="search-wrap"><input class="search-inp" id="search-inp" placeholder="🔍 Szukaj zwrotu..." oninput="filterPhrases(this.value)"></div>
+  <div id="phrases-cats"><div class="cat-grid" id="cat-grid"></div></div>
+  <div id="phrases-detail" style="display:none;flex-direction:column;flex:1">
+    <button class="back-btn" onclick="showCats()">‹ Powrót do kategorii</button>
+    <div style="padding:8px 16px 4px;font-size:18px;font-weight:600;color:var(--acc2)" id="cat-title"></div>
+    <div style="padding:0 16px 10px;font-size:13px;color:var(--muted)" id="cat-sub"></div>
+    <div class="phrase-list-wrap" id="phrase-items"></div>
+  </div>
+</div>
+
+<div class="page" id="page-chat" style="flex-direction:column">
+  <div class="header" style="flex-shrink:0"><h1>Asystent AI</h1><p>Opisz sytuację po polsku, dostaniesz zwroty z wymową</p></div>
+  <div class="chat-inner">
+    <div class="chat-history" id="chat-history">
+      <div class="msg ai">Bonjour! 👋 Jestem Waszym asystentem na paryskie wakacje.<br><br>Opisz sytuację, np. <em style="color:var(--acc)">"Jestem w restauracji, chcę zapytać o toaletę"</em>, a podam gotowe zwroty z wymową!</div>
+    </div>
+    <div class="chat-bottom">
+      <div id="no-key-warn" class="no-key-warn" onclick="openApiModal()">⚠️ Brak klucza API. Kliknij by dodać i aktywować asystenta.</div>
+      <div class="quick-btns">
+        <button class="qbtn" onclick="quickSend('Jestem w restauracji, chcę skorzystać z toalety. Podaj zwroty jak zapytać kelnera, podziękować, wszystko dla naszej rodziny z dziećmi.')">🚻 Toaleta w restauracji</button>
+        <button class="qbtn" onclick="quickSend('Zamawiamy jedzenie w restauracji dla całej rodziny. Dominika 4 lata, Kuba 8 lat. Jakie zwroty od wejścia do rachunku?')">🍽️ Restauracja krok po kroku</button>
+        <button class="qbtn" onclick="quickSend('Dominika jest zmęczona i chce spać. Jak to powiedzieć po francusku i jak zapytać o windę do metra?')">😴 Dominika zmęczona</button>
+        <button class="qbtn" onclick="quickSend('Pada deszcz, jesteśmy przy wieży Eiffla z dziećmi. Co możemy teraz zrobić i jakie zwroty przydadzą się pod dachem?')">🌧️ Deszcz przy Eifflu</button>
+        <button class="qbtn" onclick="quickSend('Jesteśmy w piekarni. Kuba chce pain au chocolat, Dominika coś słodkiego. Jak zamówić dla obu dzieci i zapłacić?')">🥐 Piekarnia z dziećmi</button>
+        <button class="qbtn" onclick="quickSend('Jak kupić bilety metra dla rodziny? Dominika 4 lata, Kuba 8 lat. Jakie ulgi i co powiedzieć w kasie?')">🚇 Bilety metra</button>
+      </div>
+      <div class="chat-inp-row">
+        <input class="chat-inp" id="chat-inp" placeholder="Opisz sytuację po polsku..." onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendChat()}">
+        <button class="send-btn" onclick="sendChat()">↑</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page" id="page-tips">
+  <div class="header"><h1>Porady</h1><p>Transport, kultura i Paryż z dziećmi</p></div>
+  <div class="tips-scroll">
+    <div class="ts-title">Transfer: Beauvais → La Défense</div>
+    <div class="tip-card"><div class="tt">Krok 1: Beauvais → Porte Maillot</div><div class="tb">Autobus Beauvais Aéroport, ok. <b>1h15</b>. Kupujcie bilety online (ok. 17€/os). Dominika jedzie bezpłatnie. Wysiadacie przy Porte Maillot.</div></div>
+    <div class="tip-card"><div class="tt">Krok 2: Porte Maillot → La Défense</div><div class="tb"><b>Metro linia 1</b> (kierunek La Défense-Grande Arche), 3 stacje, ok. 8 minut. Wejście z poziomu przystanku autobusowego.</div></div>
+    <div class="tip-card"><div class="tt">Bilety: Navigo Easy</div><div class="tb">Karta Navigo Easy (ok. 2€) + carnety 10 biletów. <b>Dominika (poniżej 4 lat): bezpłatnie.</b> Kuba (8 lat): 50% zniżki. Aplikacja: <b>Bonjour RATP</b>.</div></div>
+    <div class="ts-title">Paryż z wózkiem i 4-latką</div>
+    <div class="tip-card"><div class="tt"><span class="bdg b-w">Uwaga</span>Metro i windy</div><div class="tb">Większość stacji NIE MA wind. Stacje z windami: <b>La Défense, Charles de Gaulle-Étoile, Châtelet-Les Halles</b>. Sprawdzajcie mapę RATP przed wyjściem.</div></div>
+    <div class="tip-card"><div class="tt"><span class="bdg b-t">Tip</span>Deszcz: idźcie do pasaży</div><div class="tb">Zadaszone trasy: <b>Passage des Panoramas, Galerie Vivienne</b> (blisko Bourse). Galeries Lafayette: 7 pięter, szklana kopuła. Idealne gdy pada!</div></div>
+    <div class="tip-card"><div class="tt">Disneyland (20 kwietnia)</div><div class="tb"><b>RER A</b> z La Défense do Marne-la-Vallée, ok. 45 min. Przyjedźcie na otwarcie. Dominika: małe atrakcje w Fantasyland, unikajcie kolejek po 14:00.</div></div>
+    <div class="ts-title">Savoir-vivre</div>
+    <div class="tip-card"><div class="tt"><span class="bdg b-i">Zasada</span>Bonjour jest obowiązkowe</div><div class="tb">Każde wejście do sklepu, kawiarni, piekarni: <b>"Bonjour !"</b>. Pominięcie = brak kultury. Kuba to ogarnie!</div></div>
+    <div class="tip-card"><div class="tt"><span class="bdg b-t">Tip</span>Woda w restauracji</div><div class="tb">Proście o <b>"une carafe d'eau"</b> (dzbanek wody z kranu). Jest bezpłatna i znakomita. Nie musicie zamawiać butelkowanej!</div></div>
+    <div class="tip-card"><div class="tt"><span class="bdg b-t">Tip</span>Pain au chocolat, nie chocolatine</div><div class="tb">W Paryżu NIE mówimy "chocolatine". To słowo z południa Francji i wywołuje uśmiech politowania.</div></div>
+  </div>
+</div>
+
+<div class="page" id="page-settings">
+  <div class="header"><h1>Ustawienia</h1><p>Klucz API i instalacja</p></div>
+  <div class="settings-wrap">
+    <div class="setting-card">
+      <h3>🔑 Klucz API Anthropic</h3>
+      <p>Wymagany do asystenta AI. Przechowywany <strong style="color:var(--text)">tylko lokalnie</strong> na Twoim urządzeniu.</p>
+      <div id="key-has" style="display:none"><div class="key-disp" id="key-disp"></div><div style="display:flex;gap:8px"><button class="btn-s" style="flex:1" onclick="openApiModal()">✏️ Zmień</button><button style="background:#2a0d0d;border:1px solid #5a1a1a;color:var(--red);border-radius:10px;padding:10px 16px;font-size:13px;cursor:pointer;font-family:inherit" onclick="deleteApiKey()">🗑️ Usuń</button></div></div>
+      <div id="key-no"><p style="color:var(--red);font-size:13px;margin-bottom:8px">Brak aktywnego klucza API.</p><button class="btn-p" onclick="openApiModal()">+ Dodaj klucz API</button></div>
+    </div>
+    <div class="setting-card">
+      <h3>📲 Instalacja PWA</h3>
+      <p style="margin-bottom:8px">Zainstaluj na ekranie głównym, by działać bez przeglądarki i offline (słownik + porady).</p>
+      <div style="font-size:13px;color:var(--muted);line-height:2;margin-bottom:12px"><b style="color:var(--text)">iPhone (Safari):</b> kliknij ⬆️ Udostępnij → "Dodaj do ekranu głównego"<br><b style="color:var(--text)">Android (Chrome):</b> menu ⋮ → "Dodaj do ekranu głównego"<br><b style="color:var(--text)">Samsung Internet:</b> menu ≡ → "Dodaj stronę do" → "Ekran główny"</div>
+      <button class="btn-p" id="install-btn2" onclick="triggerInstall()" style="display:none">📲 Zainstaluj teraz</button>
+    </div>
+    <div class="setting-card">
+      <h3>ℹ️ O aplikacji</h3>
+      <p style="margin-bottom:0">Paris Family Guide v1.1<br>Dominika (4 l.) + Kuba (8 l.) · 17-22 kwietnia 2026 · La Défense<br><br>Słownik i porady działają offline. Chat AI wymaga internetu i klucza API.</p>
+    </div>
+  </div>
+</div>
+
+<nav class="nav">
+  <button class="nav-btn active" id="nav-home" onclick="goPage('page-home')"><div class="nav-icon">⌂</div><div>Start</div></button>
+  <button class="nav-btn" id="nav-phrases" onclick="goPage('page-phrases')"><div class="nav-icon">🇫🇷</div><div>Słownik</div></button>
+  <button class="nav-btn" id="nav-chat" onclick="goPage('page-chat')"><div class="nav-icon">🤖</div><div>AI Chat</div></button>
+  <button class="nav-btn" id="nav-tips" onclick="goPage('page-tips')"><div class="nav-icon">📌</div><div>Porady</div></button>
+  <button class="nav-btn" id="nav-settings" onclick="goPage('page-settings')"><div class="nav-icon">⚙</div><div>Klucz API</div></button>
+</nav>
+</div>
+
+<script>
+
+
+const CATS=[
+  {id:'basics',icon:'👋',name:'Podstawy',sub:'Powitania i grzeczność'},
+  {id:'bakery',icon:'🥐',name:'Piekarnia',sub:'Croissanty i bagietki'},
+  {id:'restaurant',icon:'🍽️',name:'Restauracja',sub:'Jedzenie i rachunek'},
+  {id:'transport',icon:'🚇',name:'Transport',sub:'Metro, RER, taxi'},
+  {id:'shopping',icon:'🛍️',name:'Zakupy',sub:'Ceny i płatności'},
+  {id:'kids',icon:'👧',name:'Z dziećmi',sub:'Dominika i Kuba'},
+  {id:'hotel',icon:'🏨',name:'Hotel',sub:'Zameldowanie i pokój'},
+  {id:'emergency',icon:'🚨',name:'Awaryjne',sub:'Pomoc i nagłe sytuacje'},
+  {id:'tourist',icon:'🏛️',name:'Turystyka',sub:'Zabytki i atrakcje'},
+  {id:'weather',icon:'🌧️',name:'Pogoda',sub:'Deszcz i temperatura'},
+  {id:'numbers',icon:'🔢',name:'Liczby',sub:'Cyfry i czas'},
+  {id:'compliments',icon:'❤️',name:'Komplementy',sub:'Uprzejmości i pochwały'}
+];
+const PH={
+  basics:[
+    {fr:"Bonjour !",pl:"Dzień dobry / Cześć",pron:"bon-żur",tip:"ZAWSZE pierwsze słowo gdy wchodzisz do sklepu, kawiarni, piekarni. Absolutna podstawa!"},
+    {fr:"Bonsoir !",pl:"Dobry wieczór",pron:"bon-słar",tip:"Używaj po 18:00 zamiast Bonjour"},
+    {fr:"Au revoir !",pl:"Do widzenia",pron:"o rəłar",tip:"Obowiązkowe przy wyjściu ze sklepu lub restauracji"},
+    {fr:"S'il vous plaît",pl:"Proszę (do obcych)",pron:"sił vu ple",tip:"Do nieznajomych, w sklepach i restauracjach"},
+    {fr:"Merci !",pl:"Dziękuję",pron:"mersi",tip:"Kuba i Dominika powinni znać to na pamięć!"},
+    {fr:"Merci beaucoup !",pl:"Dziękuję bardzo",pron:"mersi boku",tip:"Robi większe wrażenie niż samo merci"},
+    {fr:"Excusez-moi",pl:"Przepraszam (do uwagi)",pron:"ekskuze mua",tip:"By przyciągnąć uwagę kelnera lub zapytać przechodnia"},
+    {fr:"Pardon",pl:"Przepraszam (w tłumie)",pron:"pardon",tip:"Gdy chcesz się przecisnąć w metrze lub tłumie"},
+    {fr:"Oui / Non",pl:"Tak / Nie",pron:"łi / no",tip:"Proste i niezbędne!"},
+    {fr:"Je ne comprends pas",pl:"Nie rozumiem",pron:"żə nə kompró pa",tip:"Mów spokojnie, Francuzi zazwyczaj pomagają"},
+    {fr:"Parlez-vous anglais ?",pl:"Czy mówi Pan/Pani po angielsku?",pron:"parle vu ãgle",tip:"W centrum Paryża większość pracowników mówi po angielsku"},
+    {fr:"Je ne parle pas bien français, mais j'essaie !",pl:"Nie mówię dobrze po francusku, ale próbuję!",pron:"żə nə parl pa bjẽ frãse, me żese",tip:"To zdanie gwarantuje uśmiech i pomoc. Użyj go śmiało na start!"},
+  ],
+  bakery:[
+    {fr:"Une baguette, s'il vous plaît",pl:"Jedną bagietkę, proszę",pron:"yn bagiet sił vu ple",tip:"Klasyka! Można dodać bien cuite (dobrze wypieczona)"},
+    {fr:"Deux croissants",pl:"Dwa croissanty",pron:"dø krłasan",tip:"Croissant au beurre (masłowy) jest lepszy. Dla dzieci zawsze masłowy!"},
+    {fr:"Un pain au chocolat",pl:"Jedno pain au chocolat",pron:"ę pę o szokola",tip:"Must-have dla Dominiki i Kuby! W Paryżu NIE mówimy chocolatine."},
+    {fr:"Un éclair au chocolat",pl:"Jeden ekler czekoladowy",pron:"ę ekler o szokola",tip:"Dzieci szaleją na punkcie éclairs!"},
+    {fr:"C'est combien ?",pl:"Ile to kosztuje?",pron:"se kombję",tip:"Pytaj śmiało"},
+    {fr:"C'est tout, merci",pl:"To wszystko, dziękuję",pron:"se tu mersi",tip:"Elegancko kończy zakupy"},
+    {fr:"Un café, s'il vous plaît",pl:"Proszę kawę (espresso)",pron:"ę kafe sił vu ple",tip:"We Francji café = espresso. Na americano: café allongé"},
+  ],
+  restaurant:[
+    {fr:"Une table pour quatre, s'il vous plaît",pl:"Stolik dla czterech, proszę",pron:"yn tabl pur katr sił vu ple",tip:"Zawsze rezerwujcie z wyprzedzeniem"},
+    {fr:"La carte, s'il vous plaît",pl:"Menu, proszę",pron:"la kart sił vu ple",tip:"La carte = karta dań. Le menu = zestaw dnia."},
+    {fr:"Avez-vous un menu enfant ?",pl:"Czy macie menu dla dzieci?",pron:"ave vu ę meny ãfã",tip:"Większość bistro ma menu enfant (6-10€)"},
+    {fr:"Une carafe d'eau, s'il vous plaît",pl:"Dzbanek wody z kranu, proszę",pron:"yn karaf do sił vu ple",tip:"Woda z kranu jest bezpłatna i znakomita!"},
+    {fr:"L'addition, s'il vous plaît",pl:"Rachunek, proszę",pron:"ladisjõ sił vu ple",tip:"Kelnerzy nie przynoszą rachunku bez prośby"},
+    {fr:"C'était délicieux !",pl:"To było pyszne!",pron:"sete delisję",tip:"Kelner rozkwitnie! Używajcie po każdym dobrym posiłku."},
+    {fr:"Où sont les toilettes ?",pl:"Gdzie są toalety?",pron:"u sõ le tłalet",tip:"Pytajcie przed posiłkiem, nie po!"},
+    {fr:"Une crêpe au sucre",pl:"Naleśnik z cukrem",pron:"yn krep o sykr",tip:"Dostępne też z Nutellą (au Nutella) i bananem"},
+  ],
+  transport:[
+    {fr:"Où est le métro ?",pl:"Gdzie jest metro?",pron:"u e lə metro",tip:"Stacje metra oznaczone dużym M na ulicy"},
+    {fr:"La Défense, s'il vous plaît",pl:"Do La Défense, proszę",pron:"la defãs sił vu ple",tip:"Wasza baza. Metro linia 1 lub RER A."},
+    {fr:"Y a-t-il un ascenseur ?",pl:"Czy jest winda?",pron:"i a til ę nasãsœr",tip:"KLUCZOWE z Dominiką! Stacje z windami: La Défense, Charles de Gaulle-Étoile, Châtelet"},
+    {fr:"C'est loin d'ici ?",pl:"Czy to daleko stąd?",pron:"se lwẽ disi",tip:"Pytaj przechodniów, Paryżanie chętnie pomagają"},
+    {fr:"Je voudrais aller à...",pl:"Chciałbym/am pojechać do...",pron:"żə łudre ale a",tip:"W taksówce lub do informacji turystycznej"},
+  ],
+  shopping:[
+    {fr:"C'est combien ?",pl:"Ile to kosztuje?",pron:"se kombję",tip:"Podstawowe pytanie w każdym sklepie"},
+    {fr:"Je regarde, merci",pl:"Tylko oglądam, dziękuję",pron:"żə rəgard mersi",tip:"Gdy ekspedient podchodzi a Ty nie potrzebujesz pomocy"},
+    {fr:"Vous acceptez la carte ?",pl:"Czy przyjmujecie kartę?",pron:"vu aksepte la kart",tip:"Większość sklepów przyjmuje karty"},
+    {fr:"Un sac, s'il vous plaît",pl:"Torbę, proszę",pron:"ę sak sił vu ple",tip:"Torby w sklepach są płatne we Francji"},
+  ],
+  kids:[
+    {fr:"Ma fille a 4 ans",pl:"Moja córka ma 4 lata",pron:"ma fij a katr ã",tip:"O Dominice. Ważne przy kupnie biletów ulgowych."},
+    {fr:"Mon fils a 8 ans",pl:"Mój syn ma 8 lat",pron:"mõ fis a łit ã",tip:"O Kubie. Bilet 50% zniżki w transporcie."},
+    {fr:"Est-ce qu'il y a un tarif enfant ?",pl:"Czy jest bilet ulgowy dla dzieci?",pron:"eske kil i a ę tarif ãfã",tip:"Dzieci poniżej 4 lat jeżdżą bezpłatnie w całym Paryżu!"},
+    {fr:"Où sont les toilettes ?",pl:"Gdzie są toalety?",pron:"u sõ le tłalet",tip:"Naucz Kubę tego na pamięć!"},
+    {fr:"Elle est fatiguée",pl:"Ona jest zmęczona (Dominika)",pron:"el e fatige",tip:"Zazwyczaj wywołuje sympatię i chęć pomocy"},
+    {fr:"Mon enfant est perdu",pl:"Moje dziecko się zgubiło",pron:"mõ ãfã e perdy",tip:"Mów głośno do każdego. Francuzi natychmiast pomogą."},
+    {fr:"Y a-t-il une aire de jeux ?",pl:"Czy jest plac zabaw?",pron:"i a til yn er də żø",tip:"W parkach i przy restauracjach z ogródkiem"},
+  ],
+  hotel:[
+    {fr:"Bonjour, j'ai une réservation",pl:"Dzień dobry, mam rezerwację",pron:"bon-żur, że yn rezervasjõ",tip:"Pierwsze słowa przy każdym check-in"},
+    {fr:"Le petit-déjeuner est-il inclus ?",pl:"Czy śniadanie jest wliczone?",pron:"lə pəti deżne et il ẽkly",tip:"Często nie jest wliczone (20-30€/os). Boulangerie jest tańsza!"},
+    {fr:"Pouvez-vous garder nos bagages ?",pl:"Czy mogą Państwo przechować bagaże?",pron:"puve vu garde no bagaż",tip:"Przydatne gdy pokój zajęty a Wy chcecie zwiedzać"},
+  ],
+  emergency:[
+    {fr:"Au secours !",pl:"Na pomoc!",pron:"o skur",tip:"Krzycz głośno. Numer alarmowy: 112"},
+    {fr:"Appelez la police !",pl:"Zadzwońcie na policję!",pron:"aple la polis",tip:"Policja: 17, Pogotowie: 15, Straż: 18, Europejski: 112"},
+    {fr:"J'ai besoin d'un médecin",pl:"Potrzebuję lekarza",pron:"że bəzwẽ dẽ medszẽ",tip:"Powiedz w recepcji hotelu lub na ulicy"},
+    {fr:"Mon enfant est perdu",pl:"Moje dziecko się zgubiło",pron:"mõ ãfã e perdy",tip:"Francuzi natychmiast mobilizują się do pomocy"},
+    {fr:"Je suis polonais(e)",pl:"Jestem Polakiem/Polką",pron:"żə słi polonε",tip:"Ambasada RP w Paryżu: +33 1 43 17 34 00"},
+    {fr:"J'ai perdu mon passeport",pl:"Zgubiłem/am paszport",pron:"że perdy mõ pasəpɔr",tip:"Zgłoś na policji, potem skontaktuj z ambasadą RP"},
+    {fr:"Où est l'hôpital ?",pl:"Gdzie jest szpital?",pron:"u e lopital",tip:"Szpital dziecięcy: Hôpital Necker, 149 Rue de Sèvres"},
+    {fr:"J'ai mal ici",pl:"Tu mnie boli",pron:"że mal isi",tip:"Wskaż gdzie boli. Działa wszędzie bez znajomości anatomii!"},
+  ],
+  tourist:[
+    {fr:"C'est ouvert ?",pl:"Czy jest otwarte?",pron:"se uver",tip:"Wiele atrakcji zamkniętych w poniedziałki!"},
+    {fr:"C'est gratuit pour les enfants ?",pl:"Czy dzieci wchodzą bezpłatnie?",pron:"se gratłi pur le zãfã",tip:"Dzieci poniżej 4 lat wchodzą WSZĘDZIE bezpłatnie we Francji!"},
+    {fr:"Prenez une photo de nous ?",pl:"Czy może Pan/Pani zrobić nam zdjęcie?",pron:"prəne yn foto də nu",tip:"Paryżanie chętnie pomagają turystom z dziećmi"},
+    {fr:"C'est magnifique !",pl:"To jest wspaniałe!",pron:"se maniifik",tip:"Francuzi są dumni ze swojego miasta. Mów to często!"},
+  ],
+  weather:[
+    {fr:"Il pleut",pl:"Pada deszcz",pron:"il plø",tip:"Kwiecień w Paryżu: bądźcie przygotowani! Peleryny dla dzieci."},
+    {fr:"Il fait froid",pl:"Jest zimno",pron:"il fe frła",tip:"14 stopni i wiatr to odczuwalnie mniej. Ubierzcie Dominikę ciepło."},
+    {fr:"Il fait beau aujourd'hui !",pl:"Dziś jest piękna pogoda!",pron:"il fe bo ożurduij",tip:"Gdy trafi się słoneczny dzień, świętujcie tą frazą!"},
+  ],
+  numbers:[
+    {fr:"un, deux, trois",pl:"1, 2, 3",pron:"ę, dø, trła",tip:"Podstawa do liczenia i zamawiania"},
+    {fr:"quatre, cinq, six",pl:"4, 5, 6",pron:"katr, sęk, sis",tip:""},
+    {fr:"sept, huit, neuf, dix",pl:"7, 8, 9, 10",pron:"set, łit, nøf, dis",tip:""},
+    {fr:"vingt euros",pl:"20 euro",pron:"vẽ øro",tip:"Cena to jedna z najważniejszych liczb!"},
+    {fr:"C'est à quelle heure ?",pl:"O której godzinie?",pron:"se ta kel ör",tip:"Kluczowe przy atrakcjach i restauracjach"},
+    {fr:"à midi",pl:"w południe (12:00)",pron:"a midi",tip:"Godzina lunchu. Wiele sklepów zamyka się na 1-2 godziny!"},
+  ],
+  compliments:[
+    {fr:"C'est magnifique !",pl:"To jest wspaniałe!",pron:"se maniifik",tip:"Na każdy widok. Francuzi są dumni z piękna Paryża."},
+    {fr:"Vous êtes très gentil(le)",pl:"Jest Pan/Pani bardzo uprzejmy/uprzejma",pron:"vu et tre żãtij",tip:"Po każdej pomocy. Robi ogromne wrażenie na Francuzach."},
+    {fr:"C'était délicieux !",pl:"To było pyszne!",pron:"sete delisję",tip:"Obowiązkowe po każdym dobrym posiłku. Kelner zapamięta Was!"},
+    {fr:"Votre ville est belle !",pl:"Wasze miasto jest piękne!",pron:"łotr vil e bel",tip:"Francuzi są z Paryża niesamowicie dumni. Robi ogromne wrażenie."},
+    {fr:"Bonne journée !",pl:"Miłego dnia!",pron:"bon żurne",tip:"Pięknie kończy każdą interakcję"},
+  ]
+};
+
+
+const SW_CODE=`const CACHE='paris-v1';self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(['./'])).then(()=>self.skipWaiting()))});self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});self.addEventListener('fetch',e=>{if(e.request.url.includes('api.anthropic.com'))return;e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)))});`;
+if('serviceWorker' in navigator){
+  const blob=new Blob([SW_CODE],{type:'application/javascript'});
+  const url=URL.createObjectURL(blob);
+  navigator.serviceWorker.register(url).catch(()=>{});
+}
+
+
+const KEY_STORE='paris_guide_api_key';
+function getKey(){return localStorage.getItem(KEY_STORE)||''}
+function hasKey(){return!!getKey()}
+
+function openApiModal(){
+  document.getElementById('api-key-inp').value=getKey()||'';
+  document.getElementById('api-msg').className='api-msg';
+  document.getElementById('api-overlay').classList.add('show');
+  setTimeout(()=>document.getElementById('api-key-inp').focus(),300);
+}
+function closeApiModal(){document.getElementById('api-overlay').classList.remove('show')}
+
+function saveApiKey(){
+  const v=document.getElementById('api-key-inp').value.trim();
+  const m=document.getElementById('api-msg');
+  if(!v){m.className='api-msg err';m.textContent='Wklej klucz zaczynający się od sk-ant-...';return}
+  if(!v.startsWith('sk-ant-')){m.className='api-msg err';m.textContent='Klucz powinien zaczynać się od "sk-ant-". Sprawdź czy skopiowałeś poprawnie.';return}
+  localStorage.setItem(KEY_STORE,v);
+  m.className='api-msg ok';m.textContent='✓ Klucz zapisany pomyślnie!';
+  updateApiUI();
+  setTimeout(closeApiModal,1200);
+}
+
+function deleteApiKey(){
+  if(confirm('Usunąć klucz API?')){localStorage.removeItem(KEY_STORE);updateApiUI()}
+}
+
+function updateApiUI(){
+  const has=hasKey(),key=getKey();
+  const ind=document.getElementById('home-api-ind'),dot=document.getElementById('home-dot'),txt=document.getElementById('home-api-txt');
+  if(has){ind.className='api-ind ok';dot.className='dot ok';txt.textContent='Klucz API aktywny'}
+  else{ind.className='api-ind no';dot.className='dot no';txt.textContent='Brak klucza API, kliknij by dodać'}
+  const warn=document.getElementById('no-key-warn');
+  if(warn)warn.style.display=has?'none':'block';
+  const kh=document.getElementById('key-has'),kn=document.getElementById('key-no'),kd=document.getElementById('key-disp');
+  if(kh&&kn){if(has){kh.style.display='block';kd.textContent=key.slice(0,12)+'...'+key.slice(-6);kn.style.display='none'}else{kh.style.display='none';kn.style.display='block'}}
+}
+
+let deferredPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{
+  e.preventDefault();deferredPrompt=e;
+  document.getElementById('install-banner').classList.add('show');
+  const b=document.getElementById('install-btn2');if(b)b.style.display='block';
+});
+function triggerInstall(){
+  if(deferredPrompt){deferredPrompt.prompt();deferredPrompt.userChoice.then(r=>{if(r.outcome==='accepted')document.getElementById('install-banner').classList.remove('show');deferredPrompt=null})}
+  else goPage('page-settings');
+}
+window.addEventListener('appinstalled',()=>{document.getElementById('install-banner').classList.remove('show');deferredPrompt=null});
+
+function goPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  const m={'page-home':'nav-home','page-phrases':'nav-phrases','page-chat':'nav-chat','page-tips':'nav-tips','page-settings':'nav-settings'};
+  if(m[id])document.getElementById(m[id]).classList.add('active');
+}
+
+function buildCats(){
+  document.getElementById('cat-grid').innerHTML=CATS.map(c=>`<div class="cat-btn" onclick="showPhrases('${c.id}')"><div class="cat-icon">${c.icon}</div><div style="font-size:13px;font-weight:600">${c.name}</div><div class="cat-count">${PH[c.id]?.length||0} zwrotów</div></div>`).join('');
+}
+
+function showCats(){
+  document.getElementById('phrases-cats').style.display='block';
+  document.getElementById('phrases-detail').style.display='none';
+  document.getElementById('search-inp').value='';
+}
+
+function showPhrases(id){
+  const cat=CATS.find(c=>c.id===id),phrases=PH[id]||[];
+  document.getElementById('cat-title').textContent=cat?cat.name:'Wyniki';
+  document.getElementById('cat-sub').textContent=cat?cat.sub:'';
+  document.getElementById('phrase-items').innerHTML=phrases.map((p,i)=>`<div class="phrase-card" id="pc-${id}-${i}" onclick="toggleCard('${id}',${i})"><button class="speak-btn" onclick="event.stopPropagation();speak(this.dataset.fr)" data-fr="${p.fr.replace(/"/g,'&quot;')}">▶</button><div class="phrase-fr">${p.fr}</div><div class="phrase-pl">${p.pl}</div><div class="phrase-pron">/${p.pron}/</div>${p.tip?`<div class="phrase-tip">💡 ${p.tip}</div>`:''}</div>`).join('');
+  document.getElementById('phrases-cats').style.display='none';
+  document.getElementById('phrases-detail').style.display='flex';
+}
+
+function filterPhrases(val){
+  if(!val||val.length<2){showCats();return}
+  const q=val.toLowerCase();
+  const results=Object.entries(PH).flatMap(([id,arr])=>arr.map(p=>({...p,id}))).filter(p=>p.fr.toLowerCase().includes(q)||p.pl.toLowerCase().includes(q));
+  const tid='search'+Date.now();PH[tid]=results;
+  document.getElementById('cat-title').textContent=`Wyniki dla "${val}"`;
+  document.getElementById('cat-sub').textContent=`${results.length} zwrotów`;
+  document.getElementById('phrase-items').innerHTML=results.map((p,i)=>`<div class="phrase-card" id="pc-${tid}-${i}" onclick="toggleCard('${tid}',${i})"><button class="speak-btn" onclick="event.stopPropagation();speak(this.dataset.fr)" data-fr="${p.fr.replace(/"/g,'&quot;')}">▶</button><div class="phrase-fr">${p.fr}</div><div class="phrase-pl">${p.pl}</div><div class="phrase-pron">/${p.pron}/</div>${p.tip?`<div class="phrase-tip">💡 ${p.tip}</div>`:''}</div>`).join('');
+  document.getElementById('phrases-cats').style.display='none';
+  document.getElementById('phrases-detail').style.display='flex';
+}
+
+function toggleCard(id,i){document.getElementById(`pc-${id}-${i}`).classList.toggle('open')}
+
+function speak(text){
+  if(!('speechSynthesis' in window)){alert('Twoja przeglądarka nie obsługuje wymowy.');return}
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='fr-FR';u.rate=0.82;
+  const v=speechSynthesis.getVoices().filter(v=>v.lang.startsWith('fr'));
+  if(v.length)u.voice=v[0];
+  speechSynthesis.speak(u);
+}
+if('speechSynthesis' in window)speechSynthesis.getVoices();
+
+let chatHistory=[];
+const SYS=`Jesteś ekspertem od języka francuskiego i asystentem podróżniczym dla polskiej rodziny w Paryżu (17-22 kwietnia 2026). Rodzina: 2 dorosłych + Dominika (4 lata) + Kuba (8 lat). Baza: La Défense. 20 kwietnia: Disneyland. Pogoda ok. 14 stopni, pochmurnie.
+
+Odpowiadaj ZAWSZE po polsku. Format dla zwrotów:
+🇫🇷 [zwrot po francusku]
+👂 Wymowa: [fonetyka dla Polaka]
+🇵🇱 Znaczenie: [po polsku]
+💡 Kiedy użyć: [krótki kontekst]
+
+Bądź konkretny. NIE używaj myślników. Uwzględniaj że Dominika szybko się męczy i potrzebuje wind.`;
+
+async function sendChat(){
+  const inp=document.getElementById('chat-inp');
+  const msg=inp.value.trim();if(!msg)return;
+  const key=getKey();
+  if(!key){openApiModal();return}
+  inp.value='';
+  addMsg(msg,'user');
+  chatHistory.push({role:'user',content:msg});
+  const loadEl=addMsg('⏳ Piszę...','ai');
+  loadEl.style.opacity='.6';
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1200,system:SYS,messages:chatHistory.slice(-12)})
+    });
+    if(!res.ok){
+      const err=await res.json().catch(()=>({}));
+      loadEl.style.opacity='1';
+      if(res.status===401){loadEl.innerHTML='❌ Nieprawidłowy klucz API. Sprawdź klucz w zakładce Klucz API.';return}
+      throw new Error(err.error?.message||'Błąd API '+res.status);
+    }
+    const data=await res.json();
+    const reply=data.content?.[0]?.text||'Przepraszam, spróbuj ponownie.';
+    loadEl.style.opacity='1';
+    loadEl.innerHTML=fmt(reply);
+    chatHistory.push({role:'assistant',content:reply});
+  }catch(e){
+    loadEl.style.opacity='1';
+    loadEl.innerHTML='❌ Błąd: '+e.message;
+  }
+  loadEl.scrollIntoView({behavior:'smooth',block:'end'});
+}
+
+function fmt(t){
+  return t.replace(/\*\*(.*?)\*\*/g,'<strong style="color:var(--acc2)">$1</strong>')
+    .replace(/\*(.*?)\*/g,'<em style="color:var(--green)">$1</em>')
+    .replace(/\n/g,'<br>');
+}
+
+function addMsg(text,cls){
+  const h=document.getElementById('chat-history');
+  const d=document.createElement('div');
+  d.className='msg '+(cls==='user'?'user':'ai');
+  d.innerHTML=text;
+  h.appendChild(d);
+  h.scrollTop=h.scrollHeight;
+  return d;
+}
+
+function quickSend(txt){document.getElementById('chat-inp').value=txt;sendChat()}
+
+buildCats();
+updateApiUI();
+
+</script>
+</body>
+</html>
